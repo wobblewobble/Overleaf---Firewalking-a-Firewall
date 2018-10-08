@@ -1,0 +1,365 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Project Titlepage Modified (v 0.1) by rcx
+%
+% Original Source: http://www.howtotex.com
+% Date: February 2014
+% 
+% This is a title page template which be used for articles & reports.
+% 
+% This is the modified version of the original Latex template from
+% aforementioned website.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%-------------------------------------------------------------------------------
+% HEADER & FOOTER
+%-------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{15pt}
+\fancyhead[L]{Student ID: B00107618}
+\fancyhead[R]{Blanchardstown Institute of Technology}
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\title{ \normalsize \textsc{Research Skills and Ethics MACS H6021}
+		\\ [2.0cm]
+		\HRule{0.5pt} \\
+		\LARGE \textbf{\uppercase{Firewalk a Firewall On-Premise and in the Cloud}}
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize \today \vspace*{5\baselineskip}}
+
+\date{}
+
+\author{
+		Student ID: B00107618 \\ 
+		Blanchardstown Institute of Technology \\
+		School of Informatics and Engineering }
+
+\maketitle
+\tableofcontents
+\newpage
+
+%-------------------------------------------------------------------------------
+% Section title formatting
+\sectionfont{\scshape}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% BODY
+%-------------------------------------------------------------------------------
+
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+You will need to develop a series of tests or attacks to prove/disprove that cloud firewalls/security is
+worse/better than on-premises firewall/security. The tests will need to be identical for both scenarios. 
+\newline
+You could use LOIC for a simulated DOS attack and see how your firewalls bear up. NMAP and SNORT evasions could be another test. 
+\newline
+The problem is that cloud infrastructure will scale to meet any need. I think to prove/disprove that on premises security is better/worse than cloud security is difficult. You could try to test certain cloud providers and examine each of their security with the same tests. 
+\newline
+They will have to be your own VMs.
+\newline
+
+%-------------------------------------------------------------------------------
+% Identify a particular problem
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Identify a problem domain}
+\addcontentsline{toc}{section}{Identify a problem domain}
+Identify a problem domain
+\newline
+Security on premise versus security in the cloud, is there a difference?
+\newline
+
+\begin{itemize}
+\item On-Premise firewall is more secure that a cloud deployed solution.
+\item AWS uses Xen and ESX, Azure uses Hyper-V.
+\item On premise firewalls can be virtual or physical on dedicated hardware. Less pressure than "hidden hardware in a cloud"
+\end{itemize}
+Fred
+\begin{itemize}
+\item \lipsum[2]
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+% Identify a particular problem
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Identify a particular problem}
+\addcontentsline{toc}{section}{Identify a particular problem}
+
+Identify a particular problem
+\newline
+Potential that you could firewalk  (option 2) a cloud firewall easier than an on-premise firewall.
+pfSense and VNS3 Available from AWS and Azure
+
+\maketitle
+% \begin{tabular}{|l|l|l|} Formats the Left, Centre or Right l,c,r
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Firewall} & \textbf{Type} & \textbf{Location}\\
+\hline
+pfSense & Physical On-Premise & Low end PC\\
+\hline
+pfSense & Virtual On-Premise & ESXi 6.5\\
+\hline
+pfSense & Virtual On-Premise & Hyper-V Server 2016\\
+\hline
+pfSense & Virtual & AWS	Free Tier Machine\\
+\hline
+pfSense & Virtual Azure & A1 Basic or equivalent to AWS Free Tier\\
+\hline
+VNS3 & Physical On-Premise & Low end PC* May not be possible\\
+\hline
+VNS3 & Virtual On-Premise & ESXi 6.5*\\
+\hline
+VNS3 & Virtual On-Premise & Hyper-V Server 2016*\\
+\hline
+VNS3 & Virtual AWS & Free Tier Machine\\
+\hline
+VNS3 & Virtual Azure & A1 Basic or equivalent to AWS Free Tier\\
+\hline
+% \hline this adds another line on the bottom
+\end{tabular}
+\newline
+\newline
+
+\begin{itemize}
+\item May need to download from Azure and convert.	
+\item Can download the VHD and convert.
+\end{itemize}
+%-------------------------------------------------------------------------------
+% Write a draft hypothesis
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Write a draft hypothesis}
+\addcontentsline{toc}{section}{Write a draft hypothesis}
+
+Write a draft hypothesis
+\newline
+The large scale deployment of cloud resources onto low cost commodity hardware, in heavily deployed 
+Software Defined Networks diminishes the ability of security devices to stop attacks and more layered
+security is necessary in cloud and hybrid deployments to secure the network.
+\newline
+Next line adds latin
+Line is rem'd out with a percentage sign
+\newline
+%\lipsum[2-2]
+
+%-------------------------------------------------------------------------------
+% Identify specific research questions/ objectives
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Identify specific research questions/ objectives}
+\addcontentsline{toc}{section}{Identify specific research questions/ objectives}
+Identify specific research questions/ objectives
+\newline
+Identify specific research questions/ objectives
+Attempt to firewalk a pfSense in the 5 declared scenarios and see if they all perform in the same way.
+Then compare the results with VNS3 in at least 3 of the 5 situations
+\newline
+Next line adds latin
+Line is rem'd out with a percentage sign
+\newline
+%\lipsum[2-2]
+
+%-------------------------------------------------------------------------------
+% Identify possible sources of data
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Identify possible sources of data}
+\addcontentsline{toc}{section}{Identify possible sources of data}
+Identify possible sources of data or how to gather data in order to develop a problem solution
+\newline
+Small test lab with a DC/ IIS Web Server/ File Server/ LAMP Stack/ INetSIM box.
+\newline
+\newline
+\maketitle
+% \begin{tabular}{|l|l|l|} Formats the Left, Centre or Right l,c,r
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Server} & \textbf{Service} & \textbf{Port}\\
+\hline
+DC & DNS & 53\\
+\hline
+DC & LDAP & 389\\
+\hline
+DC & Sysvol & TCP 139\\
+\hline
+DC & Sysvol & UDP 138\\
+\hline
+IIS & HTTP & 80\\
+\hline
+IIS & HTTPS & 443\\
+\hline
+File Server & SMB & TCP 135-139\\
+\hline
+File Server & SMB & UDP 135-139\\
+\hline
+File Server & Direct SMB & TCP/UDP 445\\
+\hline
+File Server & Direct SMB & TCP/UDP 445\\
+\hline
+Azure File Share & SMB 3 & TCP 445\\
+\hline
+% \hline this adds another line on the bottom
+\end{tabular}
+\newline
+\newline
+Next line adds Latin
+\newline
+\newline
+% \lipsum[2-2]
+Azure File Share 
+Use an Azure file share with Windows
+<\url{https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows}>
+\newline
+Frequently asked questions (FAQ) about Azure Files
+<\url{https://docs.microsoft.com/en-us/azure/storage/files/storage-files-faq}>
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% REFERENCES
+%-------------------------------------------------------------------------------
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\textbf{For Reference an online quote}
+\newline
+R\&D Systems, 2013. \textit{Technical Information. Ischemia/Reperfusion Injury.} [online] Available at: <\url{http://www.rndsystems.com/cb_detail_objectname_SP96_Ischemia.aspx}> [Accessed 28 October 2013].
+\newline
+\newline
+\textbf{For Reference a book Quote}
+\newline
+Shah, S., Baliga, R., Rajapurkar, M. and Fonseca, V., 2007. Oxidants in Chronic Kidney Disease, \textit{Journal of the American Society of Nephrology,} 18(1), pp. 16-28.
+\newline
+\newline
+Firewalking a Firewall, \textit{fzuckerman} [online] Available at: <\url{https://fzuckerman.wordpress.com/2016/10/12/firewall-exploits-firewalking/}> [Accessed 8 October 2018].
+\newline
+\newline
+VNS3:vpn VPN Appliance,{Cohesive Networks} ,[online] Available at: <\url{https://cohesive.net/products/vns3vpn,}> [Accessed 8 October 2018].
+\newline
+\newline
+VNS3:vpn Documentation , {Cohesive Networks} ,[online] Available at: <\url{https://cohesive.net/support/product-resources,}> [Accessed 8 October 2018].
+\newline
+\newline
+pfSense Download, \textit{https://www.pfsense.org/download/,} Download page, current version.
+\newline
+\newline
+pfSense Documentation, \textit{https://www.netgate.com/docs/pfsense/,} Documentation Page , Current self service support.
+\newline
+\newline
+Microsoft Website. \textit{Use an Azure file share with Windows} [online] Available at: <\url{https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows}> [Accessed 8 October 2018].
+\newline
+\newline
+Microsoft Website. \textit{Frequently asked questions (FAQ) about Azure Files}[online] Available at: <\url{https://docs.microsoft.com/en-us/azure/storage/files/storage-files-faq}> [Accessed 8 October 2018].
+\newline
+\newline
+Using Latex
+https://en.wikipedia.org/wiki/LaTeX
+\newline
+\newline
+\maketitle
+  \LaTeX{} is a document preparation system for
+  the \TeX{} typesetting program.
+Latex Tables
+\newline
+<\url{https://www.overleaf.com/latex/examples/tables/jmcytxzgxjfk}>
+\newline
+Indenting a whole paragraph
+\newline
+<\url{https://tex.stackexchange.com/questions/35933/indenting-a-whole-paragraph}>
+
+\end{document}
+
+%-------------------------------------------------------------------------------
+% SNIPPETS
+%-------------------------------------------------------------------------------
+
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{file_name}
+%	\caption{}
+%	\centering
+%	\label{label:file_name}
+%\end{figure}
+
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{graph}
+%	\caption{Blood pressure ranges and associated level of hypertension (American Heart Association, 2013).}
+%	\centering
+%	\label{label:graph}
+%\end{figure}
+
+%\begin{wrapfigure}{r}{0.30\textwidth}
+%	\vspace{-40pt}
+%	\begin{center}
+%		\includegraphics[width=0.29\textwidth]{file_name}
+%	\end{center}
+%	\vspace{-20pt}
+%	\caption{}
+%	\label{label:file_name}
+%\end{wrapfigure}
+
+%\begin{wrapfigure}{r}{0.45\textwidth}
+%	\begin{center}
+%		\includegraphics[width=0.29\textwidth]{manometer}
+%	\end{center}
+%	\caption{Aneroid sphygmomanometer with stethoscope (Medicalexpo, 2012).}
+%	\label{label:manometer}
+%\end{wrapfigure}
+
+%\begin{table}[!ht]\footnotesize
+%	\centering
+%	\begin{tabular}{cccccc}
+%	\toprule
+%	\multicolumn{2}{c} {Pearson's correlation test} & \multicolumn{4}{c} {Independent t-test} \\
+%	\midrule	
+%	\multicolumn{2}{c} {Gender} & \multicolumn{2}{c} {Activity level} & \multicolumn{2}{c} {Gender} \\
+%	\midrule
+%	Males & Females & 1st level & 6th level & Males & Females \\
+%	\midrule
+%	\multicolumn{2}{c} {BMI vs. SP} & \multicolumn{2}{c} {Systolic pressure} & \multicolumn{2}{c} {Systolic Pressure} \\
+%	\multicolumn{2}{c} {BMI vs. DP} & \multicolumn{2}{c} {Diastolic pressure} & \multicolumn{2}{c} {Diastolic pressure} \\
+%	\multicolumn{2}{c} {BMI vs. MAP} & \multicolumn{2}{c} {MAP} & \multicolumn{2}{c} {MAP} \\
+%	\multicolumn{2}{c} {W:H ratio vs. SP} & \multicolumn{2}{c} {BMI} & \multicolumn{2}{c} {BMI} \\
+%	\multicolumn{2}{c} {W:H ratio vs. DP} & \multicolumn{2}{c} {W:H ratio} & \multicolumn{2}{c} {W:H ratio} \\
+%	\multicolumn{2}{c} {W:H ratio vs. MAP} & \multicolumn{2}{c} {\% Body fat} & \multicolumn{2}{c} {\% Body fat} \\
+%	\multicolumn{2}{c} {} & \multicolumn{2}{c} {Height} & \multicolumn{2}{c} {Height} \\
+%	\multicolumn{2}{c} {} & \multicolumn{2}{c} {Weight} & \multicolumn{2}{c} {Weight} \\
+%	\multicolumn{2}{c} {} & \multicolumn{2}{c} {Heart rate} & \multicolumn{2}{c} {Heart rate} \\
+%	\bottomrule
+%	\end{tabular}
+%	\caption{Parameters that were analysed and related statistical test performed for current study. BMI - body mass index; SP - systolic pressure; DP - diastolic pressure; MAP - mean arterial pressure; W:H ratio - waist to hip ratio.}
+%	\label{label:tests}
+%\end{table}
